@@ -17,6 +17,7 @@ class Ticket extends Model
         'titulo',
         'descripcion',
         'estado',
+        'prioridad',
     ];
     //Relación con el usuario que creó el ticket
     public function usuario()

@@ -1,61 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">📌 Proyecto Soporte Cifra</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  Sistema de gestión de solicitudes desarrollado en PHP/Laravel con base de datos MySQL.  
 </p>
 
-## About Laravel
+<hr>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2>🚀 Requisitos Previos</h2>
+<ul>
+  <li>PHP 8.x o superior</li>
+  <li>Composer</li>
+  <li>MySQL 5.7 o superior</li>
+  <li>Git</li>
+</ul>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<hr>
+<h2>📦 Dependencias principales</h2>
+<ul>
+  <li><strong>Laravel Framework</strong> - Versión 10.x</li>
+  <li><strong>Laravel Sanctum</strong> - Autenticación basada en tokens</li>
+  <li><strong>MySQL</strong> - Base de datos relacional</li>
+  <li><strong>Composer</strong> - Gestión de dependencias</li>
+</ul>
+<hr>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+<h2>📥 Instalación</h2>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<ol>
+  <li><strong>Clonar el repositorio</strong></li>
+  <pre><code>git clone https://github.com/usuario/soporte-cifra.git
+cd soporte-cifra</code></pre>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+  <li><strong>Instalar dependencias</strong></li>
+  <pre><code>composer install</code></pre>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  <li><strong>Configurar el archivo <code>.env</code></strong></li>
+  <p>Modifica las credenciales según tu entorno:</p>
+  <pre><code>DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=soporte_cifra
+DB_USERNAME=root
+DB_PASSWORD=
+</code></pre>
 
-## Laravel Sponsors
+  <p>Si es necesario, crea la base de datos manualmente:</p>
+  <pre><code>CREATE DATABASE soporte_cifra;</code></pre>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  <li><strong>Generar la clave de la aplicación</strong></li>
+  <pre><code>php artisan key:generate</code></pre>
 
-### Premium Partners
+  <li><strong>Ejecutar migraciones con datos de prueba</strong></li>
+  <p>Este comando creará las tablas y agregará datos iniciales:</p>
+  <pre><code>php artisan migrate:fresh --seed</code></pre>
+</ol>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+<hr>
 
-## Contributing
+<h2>▶️ Ejecución del Proyecto</h2>
+<pre><code>php artisan serve</code></pre>
+<p>Por defecto se ejecutará en: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<hr>
 
-## Code of Conduct
+<h2>🔑 Credenciales de Prueba</h2>
+<table>
+  <tr>
+    <th>Rol</th>
+    <th>Usuario</th>
+    <th>Contraseña</th>
+  </tr>
+  <tr>
+    <td>Usuario</td>
+    <td>juan.perez@example.com</td>
+    <td>Password</td>
+  </tr>
+  <tr>
+    <td>Admin</td>
+    <td>admin@example.com</td>
+    <td>Password</td>
+  </tr>
+  <tr>
+    <td>Técnico</td>
+    <td>ana.ramirez@example.com</td>
+    <td>Password</td>
+  </tr>
+</table>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<hr>
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h2>📌 Notas</h2>
+<ul>
+  <li>Si cambias las credenciales de la base de datos, actualiza el archivo <code>.env</code>.</li>
+  <li>Este proyecto incluye datos de prueba mediante el <code>DatabaseSeeder</code>.</li>
+  <li>Compatible con entornos locales y de producción.</li>
+</ul>

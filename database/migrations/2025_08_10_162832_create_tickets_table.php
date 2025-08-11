@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('titulo', 150);
             $table->text('descripcion');
             $table->enum('estado', ['abierto', 'en_proceso', 'resuelto', 'cerrado'])->default('abierto');
+            $table->string('prioridad')->default('baja');
             $table->date('fecha_vencimiento');
             $table->timestamps();
         });
