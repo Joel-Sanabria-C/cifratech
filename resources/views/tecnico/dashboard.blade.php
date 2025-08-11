@@ -14,6 +14,7 @@
                         <th>Nombre del solicitante</th>
                         <th>Fecha de vencimiento</th>
                         <th>Estado</th>
+                        <th>Prioridad</th>
                         <th>Fecha de creación</th>
                     </tr>
                 </thead>
@@ -25,6 +26,7 @@
                             <td>{{ $ticket->usuario->nombre }}</td>
                             <td>{{ $ticket->fecha_vencimiento }}</td>
                             <td>{{ $ticket->estado }}</td>
+                            <td>{{ $ticket->prioridad }}</td>
                             <td>{{ $ticket->created_at }}</td>
                         </tr>
                     @endforeach
