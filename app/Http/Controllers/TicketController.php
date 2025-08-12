@@ -19,7 +19,7 @@ class TicketController extends Controller
     public function classifyTicket($descripcion)
 {
     $client = new Client();
-    $response = $client->post('https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english', [
+    $response = $client->post('https://api-inference.huggingface.co/models/cardiffnlp/twitter-xlm-roberta-base-sentiment', [
         'headers' => [
             'Authorization' => 'Bearer ' . env('HUGGINGFACE_TOKEN'), // Reemplaza esto
             'Content-Type' => 'application/json',
@@ -66,6 +66,7 @@ class TicketController extends Controller
     $ticket->descripcion = $request->input('descripcion');
     $ticket->estado = 'abierto';
     $ticket->prioridad = $prioridad; // Asigna la prioridad clasificada
+    $ticket->fecha_vencimiento = now()->addDays(7);
     $ticket->save();
 
     return redirect()->route('usuario.dashboard')->with('success', 'El ticket ha sido creado con éxito.');
